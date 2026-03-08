@@ -1,0 +1,31 @@
+# --- 你原有的内容 ---
+# 忽略数据文件夹（只保留结构）
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# 忽略 Python 缓存
+__pycache__/
+*.pyc
+
+# 忽略虚拟环境
+venv/
+.env
+
+# --- 💡 建议追加的保底规则 ---
+# 忽略运行日志文件
+*.log
+
+# 忽略 Jupyter 缓存（如果你用了 Jupyter Notebook）
+.ipynb_checkpoints/
+
+# 忽略可能不小心放进来的大型压缩包或完整数据集
+*.zip
+*.tar.gz
+*.mat
+*.json
+# 但我们要特意保留根目录可能存在的配置文件和 samples 里的 json
+!sample_anno.json
+!data/samples/*.json
+!data/metadata/*.json
