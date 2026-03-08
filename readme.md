@@ -1,4 +1,4 @@
-# REC-8K-Negative: A Unified Point-Based Dataset Pipeline with Negative Semantics
+# REC-8K-Negative
 
 ## 🌟 项目简介 (Overview)
 
@@ -79,8 +79,8 @@ P_neg = P_all - P_pos
 
 ### 1. 环境准备
 ```bash
-git clone [https://github.com/你的用户名/REC-8K-Negative-Pipeline.git](https://github.com/你的用户名/REC-8K-Negative-Pipeline.git)
-cd REC-8K-Negative-Pipeline
+git clone [https://github.com/GuoYQ23/neg_rec8k.git](https://github.com/GuoYQ23/neg_rec8k.git)
+cd neg_rec8k
 pip install -r requirements.txt
 ```
 
@@ -104,19 +104,26 @@ python src/build_final_dataset.py
 
 ## 📝 致谢与引用 (Citation & Acknowledgements)
 
-本项目深度依赖于原作者团队提供的 REC-8K 数据集基准。如果你在研究中使用了本数据处理工具，请务必同时引用我们的仓库以及原始论文：
+本项目深度依赖于 [sydai](https://github.com/sydai/referring-expression-counting) 团队提供的 REC-8K 数据集基准。如果你在研究中使用了本数据处理工具或生成的负向数据集，请务必同时引用本项目以及原始论文：
 
+**引用本项目 (REC-8K-Negative-Pipeline):**
 ```bibtex
-@misc{yourname2026recnegative,
-  author = {Your Name},
-  title = {REC-8K-Negative: A Unified Point-Based Dataset Pipeline with Negative Semantics},
+@misc{GuoYQ232026recnegative,
+  author = {GuoYQ23},
+  title = {REC-8K-Negative},
   year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{[https://github.com/你的用户名/REC-8K-Negative-Pipeline](https://github.com/你的用户名/REC-8K-Negative-Pipeline)}}
+  howpublished = {\url{[https://github.com/GuoYQ23/neg_rec8k](https://github.com/GuoYQ23/neg_rec8k)}}
+}
+@InProceedings{Dai_2024_CVPR,
+    author    = {Dai, Siyang and Liu, Jun and Cheung, Ngai-Man},
+    title     = {Referring Expression Counting},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {16985-16995}
 }
 ```
-*(原始 REC-8K 的引用信息请参考 sydai 的官方仓库)*
-
 ---
 **License**: MIT License
