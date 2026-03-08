@@ -67,11 +67,11 @@ REC-8K-Negative-Pipeline/
 
 ### 负向点集挖掘逻辑 (Negative Points Mining)
 
-对于任意一张图片，设其场景内所有目标的集合为 P_all，某正向指代语义（如 *“red pen”*）对应的目标集合为 P_pos。我们通过距离阈值过滤算法计算负向语义集合 P_neg：
+对于任意一张图片，设其场景内所有目标的集合为 $P_{all}$，某正向指代语义（如 *“red pen”*）对应的目标集合为 $P_{pos}$。我们通过距离阈值过滤算法计算负向语义集合 $P_{neg}$：
 
-P_neg = P_all - P_pos
+$$P_{neg} = P_{all} \setminus P_{pos}$$
 
-> **注意：** 我们的代码在内存中自动完成了上述判断与赋值。正向语义保留原始标注，负向语义的 `points` 则由 P_neg 直接填充，确保了数据的绝对纯净且无冗余字段。
+> **注意：** 我们的代码在内存中自动完成了上述判断与赋值。正向语义保留原始标注，负向语义的 `points` 则由 $P_{neg}$ 直接填充，确保了数据的绝对纯净且无冗余字段。
 
 ---
 
@@ -79,7 +79,7 @@ P_neg = P_all - P_pos
 
 ### 1. 环境准备
 ```bash
-git clone [https://github.com/GuoYQ23/neg_rec8k.git](https://github.com/GuoYQ23/neg_rec8k.git)
+git clone https://github.com/GuoYQ23/neg_rec8k.git
 cd neg_rec8k
 pip install -r requirements.txt
 ```
@@ -106,7 +106,7 @@ python src/build_final_dataset.py
 
 本项目深度依赖于 [sydai](https://github.com/sydai/referring-expression-counting) 团队提供的 REC-8K 数据集基准。如果你在研究中使用了本数据处理工具或生成的负向数据集，请务必同时引用本项目以及原始论文：
 
-**引用本项目 (REC-8K-Negative-Pipeline):**
+**引用本项目 (REC-8K-Negative):**
 ```bibtex
 @misc{GuoYQ232026recnegative,
   author = {GuoYQ23},
@@ -114,8 +114,12 @@ python src/build_final_dataset.py
   year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{[https://github.com/GuoYQ23/neg_rec8k](https://github.com/GuoYQ23/neg_rec8k)}}
+  howpublished = {\url{https://github.com/GuoYQ23/neg_rec8k}}
 }
+```
+
+**引用原始 REC-8K 论文:**
+```bibtex
 @InProceedings{Dai_2024_CVPR,
     author    = {Dai, Siyang and Liu, Jun and Cheung, Ngai-Man},
     title     = {Referring Expression Counting},
