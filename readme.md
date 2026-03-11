@@ -1,6 +1,6 @@
 # REC-8K-Negative
 
-[![Lab Affiliation](https://img.shields.io/badge/Lab-[你们实验室名称]-blue.svg)](http://47.108.172.210)
+[![Lab Affiliation](https://img.shields.io/badge/Lab-[NST]-blue.svg)](http://47.108.172.210)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > 本项目致力于解决计算机视觉中指代消解（REC）模型对负面语义理解不足的问题。
