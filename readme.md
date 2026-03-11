@@ -1,5 +1,13 @@
 # REC-8K-Negative
 
+[![Lab Affiliation](https://img.shields.io/badge/Lab-[你们实验室名称]-blue.svg)](http://47.108.172.210)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> 本项目致力于解决计算机视觉中指代消解（REC）模型对负面语义理解不足的问题。
+> 
+> 本仓库由 [GuoYQ23] 维护，隶属于 **[NOVEL SOFTWARE TECHNOLOGY]**。更多关于我们团队的研究和动态，请访问 [实验室主页](http://47.108.172.210)。
+
+
 ## 🌟 项目简介 (Overview)
 
 本项目基于 [REC-8K](https://github.com/sydai/referring-expression-counting) (Referring Expression Counting) 数据集，构建了一个端到端（End-to-End）的数据清洗、格式统一与负向语义增强流水线。
